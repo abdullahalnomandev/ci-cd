@@ -1,16 +1,16 @@
-name: Redy to code and deploy
+name: Ready to code and deploy
 
 on:
-    push:
-        branches:
-            - main
+  push:
+    branches:
+      - main
 
 jobs:
-    test-code:
-        runs-on: ubuntu-latest
-        steps:
-            - name: print working directory
-              run: |
-              pwd
-              ls -a
-              echo $GITHUB_WORKSPACE
+  test-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print working directory
+        run: |
+          pwd
+          ls -a
+          echo $GITHUB_WORKSPACE
