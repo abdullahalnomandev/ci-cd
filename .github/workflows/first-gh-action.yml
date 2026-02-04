@@ -1,11 +1,16 @@
-name : First Workflow
-on: push
+name: Redy to code and deploy
+
+on:
+    push:
+        branches:
+            - main
 
 jobs:
-  my-firstJobs:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print a message
-        run: echo "Hello from my first github Action"
-      - name: Check linting
-        run: echo "Linting checking..."
+    test-code:
+        runs-on: ubuntu-latest
+        steps:
+            - name: print working directory
+              run: |
+              pwd
+              ls -a
+              echo $GITHUB_WORKSPACE
